@@ -23,7 +23,7 @@ print("""
 ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 network port scanner & ssh server bruteforce tool
 network_attacker.py v1.0.0
-Created by: ezra
+Created by: ezra\U0001F999
 """)
 
 target_ip = input('[+] Enter Target IP:\n')
@@ -86,7 +86,6 @@ def brute_force(user_name, password):
 
 # main scanning function
 def main():
-    # check_host(target_ip)
     try:
         if check_host(target_ip) is True:
             for port in registered_ports:
@@ -97,8 +96,8 @@ def main():
             print("\n[*] Scan Finished")
             print(f"[*] Final List of Open Ports:\n[*] {open_ports}")
             if 22 in open_ports:
-                choice = input("""\n[*]SSH Service Found on Port 22
-                                \n[?]Would you like to BruteForce SSH Server?:(yes or no)""")
+                choice = input("""\n[*] SSH Service Found on Port 22
+                                \n[?] Would you like to BruteForce SSH Server?:(yes or no)""")
                 if choice.lower() == "yes":
                     user_name = input("\n[+] Enter SSH UserName:")
                     with open(r"PasswordList.txt", "r") as pass_file:
